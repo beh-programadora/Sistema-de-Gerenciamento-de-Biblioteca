@@ -1,0 +1,65 @@
+
+### .gitignore
+
+```plaintext
+# Arquivos de configuração locais
+*.env
+*.config
+
+# Logs
+*.log
+
+# Diretórios temporários
+/tmp
+/cache
+
+# Backups
+*.bak
+*.sql.bak
+
+# Bancos de dados SQLite
+*.sqlite3
+Enunciado do Projeto
+# Desafio de Projeto: Sistema de Gerenciamento de Biblioteca
+
+## Contexto
+
+Você foi contratado por uma biblioteca local para desenvolver um sistema de gerenciamento que permita organizar e acompanhar os livros disponíveis, os autores, e os empréstimos realizados. O objetivo é criar um banco de dados funcional que facilite a administração dos recursos da biblioteca e a interação com os usuários.
+
+## Objetivo
+
+Desenvolver um banco de dados usando SQL para gerenciar informações sobre livros, autores e empréstimos. O sistema deve permitir a inserção, consulta, atualização e exclusão de dados, bem como a geração de relatórios úteis para a administração da biblioteca.
+
+## Requisitos
+
+1. **Criação do Banco de Dados**:
+   - Crie um banco de dados chamado `Biblioteca`.
+
+2. **Criação das Tabelas**:
+   - **Autores**: Deve conter os campos `AutorID` (identificador único), `Nome` (nome do autor) e `Nacionalidade` (nacionalidade do autor).
+   - **Livros**: Deve conter os campos `LivroID` (identificador único), `Titulo` (título do livro), `AutorID` (referência ao autor), `AnoPublicacao` (ano de publicação) e `Genero` (gênero do livro).
+   - **Empréstimos**: Deve conter os campos `EmprestimoID` (identificador único), `LivroID` (referência ao livro), `DataEmprestimo` (data do empréstimo), `DataDevolucao` (data da devolução, se aplicável) e `NomeUsuario` (nome do usuário que fez o empréstimo).
+
+3. **Manipulação de Dados**:
+   - Inserir pelo menos 5 autores, 10 livros e 5 registros de empréstimos no banco de dados.
+   - Realizar consultas para:
+     - Listar todos os livros junto com o nome do autor e o ano de publicação.
+     - Mostrar todos os empréstimos que ainda não foram devolvidos.
+   - Atualizar a data de devolução de um empréstimo específico.
+   - Remover um livro e todos os registros relacionados a ele dos empréstimos.
+
+4. **Consultas Avançadas**:
+   - Gere um relatório que mostre o número de livros emprestados por cada autor.
+   - Crie uma consulta para listar os livros que foram emprestados mais de uma vez.
+
+## Entrega
+
+Você deve entregar o arquivo SQL contendo os comandos para a criação das tabelas, inserção de dados, e as consultas e atualizações necessárias. Além disso, forneça uma breve descrição do que foi implementado e instruções para executar o script.
+
+## Avaliação
+
+Seu trabalho será avaliado com base nos seguintes critérios:
+
+- **Corretude**: O banco de dados atende a todos os requisitos e funciona conforme o esperado.
+- **Organização**: O código SQL está bem estruturado e documentado.
+- **Criatividade**: Como você gerenciou e resolveu problemas específicos durante o desenvolvimento.
